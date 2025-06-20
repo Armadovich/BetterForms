@@ -32,7 +32,7 @@ La aplicación cumple con los objetivos definidos en el anteproyecto, permitiend
 
 ## 3. Objetivos y Historias de Usuario
 
-Se han implementado la mayoría de usuario comprometidas en el anteproyecto.
+Se han implementado la mayoría de  historias de usuario comprometidas en el anteproyecto.
 
 * **Historia 1: Creación de encuestas desde la interfaz web.**
     * **Estado:** ✔️ **Alcanzado.** La interfaz permite crear encuestas de opción múltiple de forma intuitiva.
