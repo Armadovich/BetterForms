@@ -107,9 +107,9 @@ graph TD
     Backend -- WebSocket (Real-time) --> Frontend
     Backend -- CRUD --> DB
 
-    style Frontend fill:#d4edda,stroke:#155724
-    style Backend fill:#cce5ff,stroke:#004085
-    style DB fill:#f8d7da,stroke:#721c24
+    style Frontend fill:#d4edda,stroke:#155724,color:#000000
+    style Backend fill:#cce5ff,stroke:#004085,color:#000000
+    style DB fill:#f8d7da,stroke:#721c24,color:#000000
 ```
 
 ### c. Diagrama E/R de la Base de Datos
