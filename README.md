@@ -202,12 +202,10 @@ A continuación se presenta una distribución estimada del tiempo total invertid
 ```mermaid
 pie
     title Distribución del Tiempo de Desarrollo (90 h)
-    "Análisis y Diseño" : 5
-    "Implementación Base" : 45
-    "Visualización" : 10
-    "Tiempo Real" : 10
-    "Pruebas y Ajustes" : 10
-    "Despliegue y Documentación" : 10
+    "Desarrollo Full Stack (Backend y Frontend)" : 56.25
+    "Visualización de Datos" : 11.25
+    "Tiempo Real (Socket.IO)" : 11.25
+    "Pruebas y Ajustes Finales" : 11.25
 ```
 
 ### b. Análisis y Justificación
