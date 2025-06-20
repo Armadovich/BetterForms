@@ -12,6 +12,10 @@ export default function Dashboard() {
   const { user, logout } = useAuth();
   const router = useRouter();
   
+  console.log('Dashboard: user state:', user);
+  console.log('Dashboard: localStorage user:', localStorage.getItem('user'));
+  console.log('Dashboard: localStorage token:', localStorage.getItem('token'));
+  
   // Hook para gestionar las encuestas del usuario
   const { surveys, loading, error, deletingSurvey, deleteSurvey } = useSurveys(user);
 
