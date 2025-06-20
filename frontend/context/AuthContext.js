@@ -62,12 +62,19 @@ export function AuthProvider({ children }) {
         throw new Error(data.message || 'Error al registrarse');
       }
 
+      // El backend devuelve { _id, name, email, token }
+      const userData = {
+        _id: data._id,
+        name: data.name,
+        email: data.email
+      };
+
       // Guardar token y datos del usuario
       localStorage.setItem('token', data.token);
-      localStorage.setItem('user', JSON.stringify(data.user));
-      setUser(data.user);
+      localStorage.setItem('user', JSON.stringify(userData));
+      setUser(userData);
       
-      console.log('AuthContext: Usuario registrado y guardado');
+      console.log('AuthContext: Usuario registrado y guardado:', userData);
 
       return data;
     } catch (error) {
@@ -77,10 +84,37 @@ export function AuthProvider({ children }) {
   };
 
   // Iniciar sesión
-  const login = (userData) => {
-    if (userData && typeof userData === 'object') {
-      setUser(userData);
+  const login = async (email, password) => {
+    try {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/login`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || 'Error al iniciar sesión');
+      }
+
+      // El backend devuelve { _id, name, email, token }
+      const userData = {
+        _id: data._id,
+        name: data.name,
+        email: data.email
+      };
+
+      // Guardar token y datos del usuario
+      localStorage.setItem('token', data.token);
       localStorage.setItem('user', JSON.stringify(userData));
+      setUser(userData);
+
+      return data;
+    } catch (error) {
+      throw error;
     }
   };
 

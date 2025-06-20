@@ -21,25 +21,7 @@ export default function Login() {
     setLoading(true);
 
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/login`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.message || 'Error al iniciar sesión');
-      }
-
-      // Guardar token y datos del usuario
-      localStorage.setItem('token', data.token);
-      localStorage.setItem('user', JSON.stringify(data));
-      
-      login(data);
+      await login(formData.email, formData.password);
       router.push('/dashboard');
     } catch (err) {
       setError(err.message || 'Error al iniciar sesión');
