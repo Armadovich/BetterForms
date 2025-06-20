@@ -153,6 +153,31 @@ El desarrollo se realizó en un periodo intensivo de dos semanas, priorizando la
 Aunque la planificación inicial preveía un desarrollo progresivo desde el 10 de mayo, por motivos de disponibilidad y carga académica, el grueso del trabajo se concentró en dos semanas intensivas a partir de principios de junio. Se optó por un enfoque práctico y directo, priorizando la entrega funcional del proyecto.
 
 ### Planificación Prevista
+
+Planificación inicial de tiempo:
+```mermaid
+gantt
+    title Desarrollo Real de Better Forms
+    dateFormat  YYYY-MM-DD
+    axisFormat %d %b
+
+    section Planificación
+    Análisis y Diseño          :2025-05-10, 2025-05-25
+
+    section Desarrollo Inicial
+    Implementación base        :2025-05-25, 2025-06-10
+
+    section Visualización
+    Visualización              :2025-06-10, 2025-06-12
+    Tiempo real (Sockets)      :2025-06-12, 2025-06-15
+
+    section Cierre
+    Pruebas y ajustes          :2025-06-15, 2025-06-22
+    Despliegue                 :2025-06-22, 2025-06-25
+```
+
+Y esta fue la distribución de tiempo final:
+
 ```mermaid
 gantt
     title Desarrollo Real de Better Forms
