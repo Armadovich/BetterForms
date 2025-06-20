@@ -42,6 +42,9 @@ export function AuthProvider({ children }) {
   // Registrar usuario
   const register = async (name, email, password) => {
     try {
+      console.log('AuthContext: Iniciando registro...');
+      console.log('AuthContext: API URL:', process.env.NEXT_PUBLIC_API_URL);
+      
       const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/register`, {
         method: 'POST',
         headers: {
@@ -50,7 +53,10 @@ export function AuthProvider({ children }) {
         body: JSON.stringify({ name, email, password }),
       });
 
+      console.log('AuthContext: Response status:', response.status);
+      
       const data = await response.json();
+      console.log('AuthContext: Response data:', data);
 
       if (!response.ok) {
         throw new Error(data.message || 'Error al registrarse');
@@ -60,9 +66,12 @@ export function AuthProvider({ children }) {
       localStorage.setItem('token', data.token);
       localStorage.setItem('user', JSON.stringify(data.user));
       setUser(data.user);
+      
+      console.log('AuthContext: Usuario registrado y guardado');
 
       return data;
     } catch (error) {
+      console.error('AuthContext: Error en registro:', error);
       throw error;
     }
   };

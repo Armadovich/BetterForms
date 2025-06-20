@@ -30,9 +30,14 @@ export default function Register() {
     setLoading(true);
 
     try {
+      console.log('Iniciando registro...');
       await register(formData.name, formData.email, formData.password);
-      router.push('/dashboard');
+      console.log('Registro exitoso, redirigiendo...');
+      
+      // Usar window.location para asegurar la redirección
+      window.location.href = '/dashboard';
     } catch (err) {
+      console.error('Error en registro:', err);
       setError(err.message || 'Error al registrarse');
     } finally {
       setLoading(false);
