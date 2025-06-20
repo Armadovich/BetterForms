@@ -39,6 +39,34 @@ export function AuthProvider({ children }) {
     setUser(null);
   };
 
+  // Registrar usuario
+  const register = async (name, email, password) => {
+    try {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/register`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, email, password }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || 'Error al registrarse');
+      }
+
+      // Guardar token y datos del usuario
+      localStorage.setItem('token', data.token);
+      localStorage.setItem('user', JSON.stringify(data.user));
+      setUser(data.user);
+
+      return data;
+    } catch (error) {
+      throw error;
+    }
+  };
+
   // Iniciar sesión
   const login = (userData) => {
     if (userData && typeof userData === 'object') {
@@ -63,6 +91,7 @@ export function AuthProvider({ children }) {
     loading,
     login,
     logout,
+    register,
     isAuthenticated
   };
 
