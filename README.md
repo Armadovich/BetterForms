@@ -172,8 +172,8 @@ gantt
     Tiempo real (Sockets)      :2025-06-12, 2025-06-15
 
     section Cierre
-    Pruebas y ajustes          :2025-06-15, 2025-06-22
-    Despliegue                 :2025-06-22, 2025-06-25
+    Pruebas y ajustes          :2025-06-15, 2025-06-20
+    Despliegue                 :2025-06-20, 2025-06-20
 ```
 
 Y esta fue la distribución de tiempo final:
