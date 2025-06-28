@@ -231,9 +231,6 @@ A continuación se presenta un resumen de los recursos utilizados:
 Este proyecto ha sido desarrollado de forma individual, como parte de un
 proceso de aprendizaje y con fines educativos. No implica la constitución
 de una actividad económica real ni requiere el alta como autónomo. El
-
-13
-
 objetivo principal es ampliar conocimientos, explorar nuevas tecnologías
 y enriquecer mi portfolio profesional mediante la realización de un
 proyecto más ambicioso de lo habitual.
