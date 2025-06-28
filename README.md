@@ -228,7 +228,24 @@ A continuación se presenta un resumen de los recursos utilizados:
 | **Total de Horas Invertidas** | Desarrollo personal intensivo   | -            | 90 h  |
 | **Coste Total del Proyecto** |                                   |              | **0 €** |
 
-El desarrollo se enfocó en la funcionalidad y el aprendizaje, lo que permitió realizar un proyecto completo sin necesidad de inversiones externas.
+Este proyecto ha sido desarrollado de forma individual, como parte de un
+proceso de aprendizaje y con fines educativos. No implica la constitución
+de una actividad económica real ni requiere el alta como autónomo. El
+
+13
+
+objetivo principal es ampliar conocimientos, explorar nuevas tecnologías
+y enriquecer mi portfolio profesional mediante la realización de un
+proyecto más ambicioso de lo habitual.
+Aunque no existe una remuneración real, se estima un coste de dedicación teórica equivalente a un trabajo parcial, valorado en torno a
+1000 € al mes. Esta estimación sirve únicamente como referencia para
+contextualizar el esfuerzo invertido. Del mismo modo, no se contempla la
+cotización al Régimen Especial de Trabajadores Autónomos (RETA), ya
+que no se ha formalizado ninguna actividad comercial. En caso de que el
+proyecto evolucionara hacia una explotación económica futura, se
+valoraría entonces la opción de darse de alta como autónomo y asumir
+los costes correspondientes (como la tarifa plana de 80 €/mes durante el
+primer año).
 
 
 ## 10. Conclusiones
